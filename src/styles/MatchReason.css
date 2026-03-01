@@ -1,0 +1,39 @@
+/* 추천 이유 - 다크 글래스모피즘 */
+.match-reason {
+  text-align: center;
+  margin-top: 0.3rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+.match-reason-text {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.55rem 1.3rem;
+  border-radius: 25px;
+  margin: 0;
+  backdrop-filter: blur(12px);
+  line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .match-reason-text {
+    font-size: 0.8rem;
+    padding: 0.45rem 1rem;
+    max-width: 300px;
+  }
+}

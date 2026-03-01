@@ -1,0 +1,66 @@
+/* 버튼 - 다크 글래스모피즘 */
+.pick-button {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff6b9d 0%, #c084fc 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 버튼 내부 글로우 */
+.pick-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  border-radius: 50px 50px 0 0;
+  pointer-events: none;
+}
+
+.pick-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.4),
+    0 0 40px rgba(192, 132, 252, 0.15);
+}
+
+.pick-button:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.pick-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pick-button.spinning {
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .pick-button {
+    padding: 0.85rem 2.2rem;
+    font-size: 1.05rem;
+  }
+}

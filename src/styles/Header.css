@@ -1,0 +1,40 @@
+/* 헤더 스타일 - 다크 글래스모피즘 */
+.header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  background: linear-gradient(135deg, #ff6b9d 0%, #c084fc 50%, #ff6b9d 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.4rem 0;
+  animation: gradientShift 4s ease infinite;
+  letter-spacing: 1px;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
+  }
+}

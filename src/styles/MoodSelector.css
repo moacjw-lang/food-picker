@@ -1,0 +1,92 @@
+/* 기분 선택 - 다크 글래스모피즘 */
+.mood-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 540px;
+}
+
+.mood-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.mood-buttons {
+  display: flex;
+  gap: 0.35rem;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.3rem 0.2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mood-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.mood-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.5rem 0.55rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  backdrop-filter: blur(8px);
+}
+
+.mood-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.mood-button.active {
+  background: rgba(255, 107, 157, 0.15);
+  border-color: rgba(255, 107, 157, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(255, 107, 157, 0.2);
+}
+
+.mood-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.mood-text {
+  font-size: 0.58rem;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+}
+
+.mood-button.active .mood-text {
+  color: #ff6b9d;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .mood-selector {
+    max-width: 100%;
+  }
+
+  .mood-button {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .mood-emoji {
+    font-size: 1.15rem;
+  }
+
+  .mood-text {
+    font-size: 0.52rem;
+  }
+}

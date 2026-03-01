@@ -1,0 +1,56 @@
+/* 카테고리 필터 - 다크 글래스모피즘 */
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  max-width: 500px;
+}
+
+.category-button {
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.category-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.category-button.active {
+  background: rgba(255, 107, 157, 0.15);
+  color: #ff6b9d;
+  border-color: rgba(255, 107, 157, 0.4);
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(255, 107, 157, 0.15);
+}
+
+.menu-count {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .category-button {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
